@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="no1">Number1</label>
+    <input type="text" id="input1" placeholder="type" class="inputClass"><br>
+    <span id="outputOne"></span><br>
+    <label for="no2">Number2</label>
+    <input type="text" name="input2" placeholder="type" id="input2" ><br>
+    <span id="outputTwo"></span><br>
+    <button id="button" type="submit" onclick="printValues()">click me </button>
+
+    <script>
+        function printValues(){
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+            document.getElementById('outputOne').innerHTML = inputOne;
+            document.getElementById('outputTwo').innerHTML = inputTwo;
+        }
+       
+    </script>
+
+   
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <label for="name1">Text</label>
+    <input type="text" name="name1" id="input1" placeholder="type"><br>
+    <span id="outputOne"></span><br>
+    <label for="name2">Text</label>
+    <input type="text" name="name2" id="input2" placeholder="type"><br>
+    <span id="outputTwo"></span><br>
+
+     <button type="submit" id="button" onclick="printValue()">click me</button>
+     <button type="submit" id="add" onclick="add()">Add</button>
+     <button type="submit" id="sub" onclick="sub()">sub</button>
+     <button type="submit" id="multiply" onclick="multiply()">multiply</button>
+     <button type="submit" id="divide" onclick="divide()">divide</button>
+     <button type="submit" id="reset" onclick="reset()">reset</button>
+
+
+     <script>
+        function printValue() {
+
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+
+            document.getElementById('outputOne').innerHTML = inputOne;
+            document.getElementById('outputTwo').innerHTML = inputTwo;
+        }
+
+        function add() {
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+            console.log(parseInt(inputOne)+ parseInt(inputTwo));
+        }
+
+        function sub() {
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+
+            console.log(parseInt(inputOne) - parseInt(inputTwo));
+        }
+
+        function multiply() {
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+
+            console.log(parseInt(inputOne) * parseInt(inputTwo))
+        }
+        function divide() {
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+
+            console.log(parseInt(inputOne) / parseInt(inputTwo));
+        }
+        function reset() {
+
+            let inputOne = document.getElementById('input1').value;
+            let inputTwo = document.getElementById('input2').value;
+
+            document.getElementById("inputOne").reset();
+            document.getElementById("inputTwo").reset();
+        }
+
+     </script>
+</body>
+</html>
