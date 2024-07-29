@@ -36,6 +36,7 @@
     <title>Document</title>
 </head>
 <body>
+<form action="">
     <br>
     <label for="name1">Text</label>
     <input type="text" name="name1" id="input1" placeholder="type"><br>
@@ -49,7 +50,7 @@
      <button type="submit" id="sub" onclick="sub()">sub</button>
      <button type="submit" id="multiply" onclick="multiply()">multiply</button>
      <button type="submit" id="divide" onclick="divide()">divide</button>
-     <button type="submit" id="reset" onclick="reset()">reset</button>
+     <button type="button" id="reset" onclick="resetForm()">reset</button>
 
 
      <script>
@@ -87,15 +88,12 @@
 
             console.log(parseInt(inputOne) / parseInt(inputTwo));
         }
-        function reset() {
-
-            let inputOne = document.getElementById('input1').value;
-            let inputTwo = document.getElementById('input2').value;
-
-            document.getElementById("inputOne").reset();
-            document.getElementById("inputTwo").reset();
+        function resetForm() {
+            document.getElementById("myForm").reset();
+            document.getElementById('inputOne').innerHTML = '';
+            document.getElementById('inputTwo').innerHTML = '';
         }
-
      </script>
+     
 </body>
 </html>
