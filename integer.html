@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label for="txtNum">Number</label>
+        <input type="text" value="0" id="txtNum">
+
+        <span id="spnResult"></span>
+
+        <input type="button" name="play" value="playBtn" onclick="play()">
+        <input type="button" name="reset" value="reset" onclick="reset()">
+
+
+        <script>
+            function  play() {
+                 var uNum =parseInt (document.getElementById("txtNum").value);
+                 var rNum = parseInt((Math.random() * 10)+ 1);//1 to 10
+
+                 if (uNum == rNum) {
+                    document.getElementById("spnResult").innerHTML("Congrates you won.");
+                 }else{
+                    document.getElementById("spnResult").innerHTML = "you lost The number is "+ rNum;
+                 }
+            }
+            function reset() {
+                document.getElementById("txtNum").value="0";
+                document.getElementById("spnResult").innerHTML="Number";
+            }
+        </script>
+    </div>
+</body>
+</html>

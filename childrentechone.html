@@ -1,41 +1,88 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        userform{
+        .container{
             background-color: lightslategray;
             font-family: Arial, Helvetica, sans-serif;
-            padding: 10px;
+            padding: 20px;
+            width: 30%;
         }
     </style>
 </head>
 <body>
-    <form action="userform">
-        <fieldset>
-            <legend>Welcome form </legend>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" value="">
-            <span id="message"></span><br>
-            <input type="button" id="uderadd" name="button" value="Submit" onclick="shadow_text">
-        </fieldset>
-    </form>
-    <script>
-        function shadow_text() {
-            var name = document.getElementById('name');
-            var message = document.getElementById('message');
+    
+        <div class="container">
+            <legend>Welcome form </legend><br>
+            <label for="txtNum1">Number1:</label>
+            <input type="text" id="txtNum1" value="0"><br><br>
 
-            if (name.value !="") {
-                message.innerHTML= "Hello" + name.value;
-                message.style.color="green";
-            }
-            else{
-                message.inner= "Please inter your name";
-                message.style.color="red";
-            }
+            <label for="txtNum2">Number2:</label>
+            <input type="text" id="txtNum2" value="0"><br><br>
+            
+            <label for="txtSum">Sum:</label>
+            <input type="text" id="txtSum" value="0" disabled><br><br>
+
+               <input type="button" id="add" value="add" onclick="add()"/>
+           <input type="button" id="reset" value="reset" onclick="reset()"/>
+
+
+</div>
+
+    <script>
+        function reset() {
+          document.getElementById("txtNum1").value="0";
+          document.getElementById("txtNum2").value="0";
+          document.getElementById("txtSum").value="0"
+        }
+
+        function add(){
+            var num1= Number(document.getElementById("txtNum1").value);
+            var num2 = Number(document.getElementById("txtNum2").value);
+
+            var sum = num1 + num2;
+            document.getElementById("txtSum").value= String(sum);
         }
     </script>
 </body>
-</html>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <label>Radius:</label><br>
+        <input type="number" id="txtRadius" value="0"/><br>
+
+        <input type="button" value="Calculate" onclick="Calculate()"/>
+        <input type="button" value="Reset" onclick="reset()"><br><br>
+
+        <span id="spnResult">Area of circle = 0</span>
+
+    </div>
+    <script>
+        function Calculate() {
+          var r = Number(document.getElementById("txtRadius").value);
+          var  areaofCircle = Math.PI * r * r;
+          document.getElementById("spnResult").innerHTML = "Area of Circle = " + areaofCircle.toFixed(2); 
+        }
+        function reset() {
+            document.getElementById("txtRadius").value ="0";
+            document.getElementById("spnResult").innerHTML = "Area of circle = 0";
+        }
+    </script>
+</body>
+</html> 
+
+<!-- <h1>odd even</h1>

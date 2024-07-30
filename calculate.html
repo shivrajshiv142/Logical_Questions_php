@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: black;
+            width: 20%;
+            padding: 10px;
+            box-shadow: 0px, 0px, 5px, black;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #txtExpression{
+            background-color: aliceblue;
+            color: black;
+
+        }
+        input[type = 'button']{
+            width: 25%;
+            height: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <input type="text" name="" id="txtExpression" value="" disabled><br><br>
+
+
+        <input type="button" value="1" onclick="buildExpression(this.value)">
+        <input type="button" value="2" onclick="buildExpression(this.value)">
+        <input type="button" value="3" onclick="buildExpression(this.value)">
+        <input type="button" value="4" onclick="buildExpression(this.value)"><br><br>
+        <input type="button" value="5" onclick="buildExpression(this.value)">
+        <input type="button" value="6" onclick="buildExpression(this.value)">
+        <input type="button" value="7" onclick="buildExpression(this.value)">
+        <input type="button" value="8" onclick="buildExpression(this.value)"><br><br>
+        <input type="button" value="9" onclick="buildExpression(this.value)">
+        <input type="button" value="0" onclick="buildExpression(this.value)">
+        <input type="button" value="." onclick="buildExpression(this.value)">
+        <input type="button" value="=" onclick="Calculate(this.value)"><br><br>
+        <input type="button" value="+" onclick="buildExpression(this.value)">
+        <input type="button" value="-" onclick="buildExpression(this.value)">
+        <input type="button" value="*" onclick="buildExpression(this.value)">
+        <input type="button" value="/" onclick="buildExpression(this.value)"><br><br>
+        <input type="button" value="%" onclick="buildExpression(this.value)">
+        <input type="button" value="(" onclick="buildExpression(this.value)">
+        <input type="button" value=")" onclick="buildExpression(this.value)">
+        <input type="button" value="C" onclick="clearExpression()">
+
+    </div>
+
+    <script>
+
+        var expression = document.getElementById("txtExpression").value;
+        function buildExpression(value) {
+            expression = expression + value;
+            document.getElementById("txtExpression").value = expression;
+        }
+
+        function Calculate() {
+            document.getElementById("txtExpression").value = eval(expression);
+        }
+        function clearExpression() {
+            expression="";
+            document.getElementById("txtExpression").value = expression;
+        }
+    </script>
+</body>
+</html>

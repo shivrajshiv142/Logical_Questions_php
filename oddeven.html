@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container">
+        <label for="txtNum">Number</label>
+        <input type="text" value="0" id="txtNum">
+       <span id="spnResult">
+          inter an intiger number
+       </span>
+        <input type="button" onclick="test()" value="test">
+        <input type="button" onclick="reset()" value="reset">
+
+    </div>
+  
+    <script>
+        function test() {
+            var num = Number (document.getElementById("txtNum").value);
+            // console.log(a)
+            if (num%2 == 0) {
+                document.getElementById("spnResult").innerHTML = num + "is even number";
+            }else{
+            
+                document.getElementById("spnResult").innerHTML = num + "is odd number";
+            }
+        }
+        function reset() {
+            document.getElementById("txtNum").value;
+            document.getElementById("spnResult").innerHTML="inter an integer number";
+        }
+    </script>
+</body>
+</html>
